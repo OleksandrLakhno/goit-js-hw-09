@@ -9,10 +9,11 @@ const btnStop = document.querySelector('[data-stop]');
 btnStart.addEventListener("click", e => { 
     timeoutId = setInterval(() => { 
         body.style.backgroundColor = getRandomHexColor();
-        btnStart.disabled = true;
+        
         btnStop.disabled = false;
         
-    },1000)
+    }, 1000)
+    btnStart.disabled = true;
 });
 
 btnStop.addEventListener('click', e => { 
